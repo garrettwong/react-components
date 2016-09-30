@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Table.css';
-import Header from './Header';
+import Header from './TableHeader';
 
 class Table extends Component {
 
@@ -23,6 +23,7 @@ class Table extends Component {
                             return <tr>
                                     <td>{item.name}</td>
                                     <td>{item.email}</td>
+                                    <td>{item.position}</td>
                                 </tr>;
                         })}
                     </tbody>

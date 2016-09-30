@@ -13,11 +13,12 @@ import s from './Layout.css';
 import Header from '../Header';
 
 import Table from '../Table';
-import Table2 from '../Table2';
+import DraggableList from '../DraggableList';
 
 
-const headers = ['Name', 'Email', 'Other', 'Attribute'];
-const rows = [ { name: 'Garrett Wong', email: 'Garrett.Wong@wdc.com' }, { name: 'Bryan Lim', email: 'limlam8@gmail.com' }];
+const headers = ['Name', 'Email', 'Position' ];
+const rows = [ { name: 'Garrett Wong', email: 'Garrett.Wong@wdc.com', position: 'Chef' }, { name: 'Bryan Lim', email: 'limlam8@gmail.com', position: 'Fantasy Analyst' }];
+const listData = ['hi', 'no', 'bye'];
 
 function Layout() {
   return (
@@ -28,12 +29,11 @@ function Layout() {
       <ul class="componentList">
         <li>
           <Table headers={headers}
-                 rows={rows}
-          />
+                 rows={rows} />
         </li>
 
         <li>
-          <Table2 to="silverfish" />
+          <DraggableList rows={listData} />
         </li>
 
       </ul>

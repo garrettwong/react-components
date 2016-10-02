@@ -15,6 +15,7 @@ import Header from '../Header';
 import Table from '../Table';
 import DraggableList from '../DraggableList';
 
+import CommentBox from '../CommentBox';
 
 const headers = ['Name', 'Email', 'Position' ];
 const rows = [ { name: 'Garrett Wong', email: 'Garrett.Wong@wdc.com', position: 'Chef' }, { name: 'Bryan Lim', email: 'limlam8@gmail.com', position: 'Fantasy Analyst' }];
@@ -25,6 +26,7 @@ function Layout() {
     <div>
       <Header />
 
+      <CommentBox pollInterval="5" />
 
       <ul class="componentList">
         <li>

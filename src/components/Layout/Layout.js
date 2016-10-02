@@ -28,7 +28,7 @@ function Layout() {
 
       <CommentBox pollInterval="5" />
 
-      <ul class="componentList">
+      <ul className="componentList">
         <li>
           <Table headers={headers}
                  rows={rows} />

@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 
 class Comment extends Component {
   static propTypes = {
-    author: '',
-    children: ''
+    author: PropTypes.string,
+    children: PropTypes.string
   };
 
   render() {

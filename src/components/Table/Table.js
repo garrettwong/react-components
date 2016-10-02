@@ -19,8 +19,8 @@ class Table extends Component {
                     <Header headers={this.props.headers} />
 
                     <tbody>
-                        {this.props.rows.map(function(item) {
-                            return <tr>
+                        {this.props.rows.map(function(item, i) {
+                            return <tr key={i}>
                                     <td>{item.name}</td>
                                     <td>{item.email}</td>
                                     <td>{item.position}</td>

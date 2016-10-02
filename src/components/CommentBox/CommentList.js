@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import Comment from './Comment';
+
 class CommentList extends Component {
 
   render() {
@@ -10,7 +12,7 @@ class CommentList extends Component {
         </Comment>
       );
     });
-    
+
     return (
       <div className="commentList">
         {commentNodes}

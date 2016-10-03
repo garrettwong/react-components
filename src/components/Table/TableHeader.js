@@ -10,8 +10,8 @@ class TableHeader extends Component {
     return (
         <thead>
             <tr>
-                {this.props.headers.map(function(item) {
-                    return <th>{item}</th>;
+                {this.props.headers.map(function(item, i) {
+                    return <th key={i}>{item}</th>;
                 })}
             </tr>
         </thead>

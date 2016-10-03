@@ -14,6 +14,7 @@ import Header from '../Header';
 
 import Table from '../Table';
 import DraggableList from '../DraggableList';
+import ToggleIconButton from '../ToggleIconButton';
 
 
 const headers = ['Name', 'Email', 'Position' ];
@@ -25,8 +26,7 @@ function Layout() {
     <div>
       <Header />
 
-
-      <ul class="componentList">
+      <ul className="componentList">
         <li>
           <Table headers={headers}
                  rows={rows} />
@@ -36,6 +36,9 @@ function Layout() {
           <DraggableList rows={listData} />
         </li>
 
+        <li>
+          <ToggleIconButton />
+        </li>
       </ul>
 
       

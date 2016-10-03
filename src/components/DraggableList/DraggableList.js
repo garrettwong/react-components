@@ -6,7 +6,7 @@ const placeholder = React.createElement('li', { className: 'placeholder' });
 
 class DraggableList extends Component {
   static propTypes = {
-    rows: PropTypes.array,
+    rows: PropTypes.array
   };
 
   constructor(props) {
@@ -14,9 +14,7 @@ class DraggableList extends Component {
     this.state = { data: this.props.rows };
   }
 
-  dragStart(e) {
-    console.log(this);
-
+  dragStart = (e) => {
     this.dragged = e.currentTarget;
 
     e.dataTransfer.effectAllowed = 'move';
@@ -25,9 +23,7 @@ class DraggableList extends Component {
     e.dataTransfer.setData('text/html', e.currentTarget);
   }
 
-  dragEnd(e) {
-    console.log('dragEnd', e.currentTarget, this);
-
+  dragEnd = (e) => {
     this.dragged.style.display = 'block';
     this.dragged.parentNode.removeChild(placeholder);
 
@@ -41,10 +37,8 @@ class DraggableList extends Component {
     this.state = { data: data };
   }
 
-  dragOver(e) {
+  dragOver = (e) => {
     e.preventDefault();
-    console.log('dragOver', e.currentTarget, this);
-    
 
     this.dragged.style.display = 'none';
     if (e.target.className === 'placeholder') return;

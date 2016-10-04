@@ -9,6 +9,8 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Select from 'react-select';
+
 import s from './Layout.css';
 import Header from '../Header';
 
@@ -18,9 +20,18 @@ import ToggleIconButton from '../ToggleIconButton';
 
 import CommentBox from '../CommentBox';
 
-const headers = ['Name', 'Email', 'Position' ];
-const rows = [ { name: 'Garrett Wong', email: 'Garrett.Wong@wdc.com', position: 'Chef' }, { name: 'Bryan Lim', email: 'limlam8@gmail.com', position: 'Fantasy Analyst' }];
+const headers = ['Name', 'Email', 'Position'];
+const rows = [{ name: 'Garrett Wong', email: 'Garrett.Wong@wdc.com', position: 'Chef' }, { name: 'Bryan Lim', email: 'limlam8@gmail.com', position: 'Fantasy Analyst' }];
 const listData = ['hi', 'no', 'bye'];
+const options = [
+  { value: 'one', label: 'One' },
+  { value: 'two', label: 'Two' },
+];
+
+function logChange(val) {
+  console.log(`Selected ${val}`);
+}
+
 
 function Layout() {
   return (
@@ -30,10 +41,18 @@ function Layout() {
 
       <CommentBox pollInterval="5" />
 
+      <Select
+        name="form-field-name"
+        value="one"
+        options={options}
+        onChange={logChange}
+      />
+
       <ul className="componentList">
         <li>
           <Table headers={headers}
-                 rows={rows} />
+            rows={rows}
+          />
         </li>
 
         <li>
@@ -45,7 +64,7 @@ function Layout() {
         </li>
       </ul>
 
-      
+
     </div>
   );
 }

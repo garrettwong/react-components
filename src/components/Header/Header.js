@@ -16,7 +16,7 @@ function Header() {
         <Navigation className={s.nav} />
         <Link className={s.brand} to="/">
           <img src={logoUrl} width="38" height="38" alt="React" />
-          <span className={s.brandTxt}>React Examples</span>
+          <span className={s.brandTxt}>React Components</span>
         </Link>
       </div>
     </div>

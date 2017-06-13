@@ -38,31 +38,32 @@ function Layout() {
     <div>
       <Header />
 
+      <div className="margin-container">
+        <CommentBox pollInterval="5" />
 
-      <CommentBox pollInterval="5" />
+        <Select
+          name="form-field-name"
+          value="one"
+          options={options}
+          onChange={logChange}
+        />
 
-      <Select
-        name="form-field-name"
-        value="one"
-        options={options}
-        onChange={logChange}
-      />
+        <ul className="componentList">
+          <li>
+            <Table headers={headers}
+              rows={rows}
+            />
+          </li>
 
-      <ul className="componentList">
-        <li>
-          <Table headers={headers}
-            rows={rows}
-          />
-        </li>
+          <li>
+            <DraggableList rows={listData} />
+          </li>
 
-        <li>
-          <DraggableList rows={listData} />
-        </li>
-
-        <li>
-          <ToggleIconButton />
-        </li>
-      </ul>
+          <li>
+            <ToggleIconButton />
+          </li>
+        </ul>
+      </div>
 
 
     </div>
